@@ -5,6 +5,6 @@ frontend: html,css,js,jquery(ajax)
 backend: django 
 
 
-<img src='full-buzzr.png'/>
+<img src='partial.png'/>
 
 
