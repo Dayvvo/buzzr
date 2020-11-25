@@ -1,0 +1,142 @@
+{% extends 'base_template.html' %}
+
+
+{% block content  %}
+    <div id="articles">
+            <div id="articlewrap">
+                <div class="articledetail">
+                    <div class="mainarticle">
+                            <div>
+                                <p id="genre"><i> {{article.genre}} </i></p>
+                                <h3 id="detailtitle">{{ article.title}}</h3>
+                                    <div id="imgcontainer">
+                                        <img src="{{article.images.url}}" alt="">
+                                    </div>
+                                    <p>
+                                        <p id="published">Published by <span id="authname" style= "color: #393c3d;"> {{article.auth}} on {{article.date}} <span> </p>
+                                    </p>
+                                    <div id="articlebod">
+                                            <div>
+                                                <span>
+                                                    {{article.body}}
+                                                </span>
+                                            </div>
+                                            
+                                    </div>
+                                    <div id="articlebod">               
+                                        {% if article.comments.all.count > 0  %}
+                                        <h4 id="commenth4">COMMENTS</h4>
+
+                                        <div id="commentbox">
+                                                
+                                                {% for user_comment in comments  %}
+    
+
+                                                        <div class="comment_box">
+                                                            <div>
+                                                                <div class="comment_name"> {{user_comment.full_name}} </div>
+                                                                <div class="comment_body">
+                                                                    {{user_comment.comment}}
+                                                                </div>
+                                                                <div class="comment_time"> <sub> {{user_comment.time_published}} </sub> </div>
+                                                            </div>
+                                                        </div>
+                                                {% endfor %}                                          
+                                            </div>                                    
+
+                                            {% if article.comments.all.count > 4  %}
+                                                <button id="viewmore">
+                                                    <div id="view_more" data-url= "{% url 'comment_dummy' slug=article.slug %}">VIEW MORE...</div>
+                                                </button>                                            
+                                            {% endif %}                                            
+                                        {% else %}
+
+                                            <h4 id="commenth4">COMMENTS</h4>
+                                            <div id="commentbox">
+
+                                                <h5 id="no_comments"> <div>No Comments.Be the first to comment</div> </h5>
+                                            </div>                                        
+
+
+                                        {% endif %}                                                 
+    
+                                        <h4 id="commenth4">POST COMMENT</h4>
+                                            <form id="addcomment" data-url=" {% url 'detail' slug=article.slug  %}" >
+                                                {% csrf_token %}
+                                                {% for form_element in form  %}
+                                                
+                                                    <div>
+                                                        {{form_element}}
+                                                    </div>
+
+                                                {% endfor %}
+                                                <div id="addc">
+                                                    <span></span>
+                                                    <input type="submit"  value="SUBMIT">
+                                                    <span class="span2"> <span >a</span> </span>
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+
+                                        
+
+                                    
+                            </div>
+                    </div>
+                </div>                    
+            </div>
+              
+            <div id="sidebar">
+                <div class="ss"> 
+                    <div class="genheader">
+                        <div> <div></div> </div> 
+                        <h3>TRENDING</h3>
+                        <div> <div> </div> </div>
+                    </div>                
+                    <div class="sidecontent">
+                        <div id="sideinner">
+                            <div class="inside-article">
+
+                                {% for i in trending %}
+                                        <div class="color">
+                                            <a href=" {% url 'detail' slug=i.slug %} " class="article">  <div> {{i.title}} </div> </a>
+                                        </div>
+                                {% endfor %}
+                            </div>
+                        
+                        </div>      
+                    </div>
+                </div>
+                <div class="ss">
+                    <div class="genheader">
+                        <div> <div></div> </div> 
+                        <h3>LATEST</h3>
+                        <div> <div> </div> </div>
+                    </div>
+                    <div class="sidecontent">
+                    <div id="sideinner">
+                        <div class="inside-article">
+                                   {% for i in latest %}
+                                    <div class="color">
+                                        <a href=" {% url 'detail' slug=i.slug %} " class="article">  <div> {{i.title}} </div> </a>
+                                    </div>
+                                {% endfor %}
+                        </div>
+                        
+    
+                    </div>      
+                </div>
+                </div>
+            
+            
+            </div>
+    </div>
+    
+
+  
+    
+{% endblock  %}
+    
+ 

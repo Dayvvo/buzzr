@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/article-styles.css">
+    <link rel="stylesheet" href="/static/css/article-detail.css">
+
+</head>
+<body>
+    <div id="sidenav">
+        <div>
+            <i class="fa fa-times icon"></i>
+        </div>
+
+        <div>
+                <a href="{% url 'index' %}"> <span>HOME</span> </a>
+                <a href="{% url 'category' 'News'  %}"> <span>NEWS</span> </a>
+                <a href="{% url 'category' 'Music' %}"><span>MUSIC</span></a>
+                <a href="{% url 'category' 'Lifestyle' %}"> <span>LIFESTYLE</span></a>
+        </div>
+
+
+    </div>
+
+    
+
+    <nav>
+ 
+        <div>
+        <a  href= "{% url 'index' %}" id="caption" >
+            <i>
+                <div><h3>BUZZR</h3></div>
+                <div><img src="" alt=""></div>
+            </i>        
+        
+        </a>
+
+        <div id="navicon">
+            <i  class="fa fa-bars icon"></i>
+        </div>
+        <div id="navsections">
+                <a href="{% url 'index' %}"> <div>HOME</div> </a>
+                <a href="{% url 'category' 'News'  %}"> <div>NEWS</div> </a>
+                <a href="{% url 'category' 'Music' %}"><div>MUSIC</div></a>
+                <a href="{% url 'category' 'Lifestyle' %}"> <div>LIFESTYLE</div></a>
+
+        </div>
+        </div>
+    </nav>
+
+
+
+
+    <div id="mainbody">
+
+
+                {% block content %}        
+
+
+                {% endblock %}
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+     <footer >
+            <div class="{{hide}}">
+                <div id="about" class="footerel">
+                    <h5>ABOUT</h5>
+
+                    <div id="aboutus">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo vitae minima quam cumque non autem! Harum illo, praesentium, possimus,
+                         omnis quia quasi veniam iure nobis exercitationem perspiciatis odit consequatur iusto?
+                    </div>
+                </div>
+
+                <div class="footerlist" class="footerel">
+                    <h5>NAVIGATION</h5>
+                    <a href="{% url 'index' %}"> <div>HOME</div> </a>
+                    <a href="{% url 'category' 'News'  %}"> <div>NEWS</div> </a>
+                    <a href="{% url 'category' 'Music' %}"><div>MUSIC</div></a>
+                    <a href="{% url 'category' 'Lifestyle' %}"> <div>LIFESTYLE</div></a>
+                    </div>
+
+                {% if not hide %}
+                
+                <div id="sendmessage" class="footerel">
+                    
+                    <form action="{% url 'index' %}" method="POST">
+                        {% csrf_token %}
+                        <h5>RECIEVE NOTIFICATIONS</h5>   
+                        {% for contact_field in form  %}
+                            {{contact_field}}
+                            <div>
+                                {% for error in contact_field.errors  %}
+                                    {{error}}
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                        <input type="submit" value="SEND MESSAGE" style="background-color: #2f89fc; border: unset; color: #fff;">
+                
+                    </form>
+                </div>
+
+                {% endif %}
+                
+                <div id="connect">
+                    <h5>CONNECT WITH US</h5>
+                    <div>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+        
+        
+
+        <div id="copyright">
+            <h4>COPYRIGHT 2020 ALL RIGHTS RESERVED</h4>
+        </div>
+
+
+
+
+
+    </footer> 
+
+
+</body>
+<script src="/static/js/jquery-3.5.0.js"></script>
+<script src="/static/js/script2.js"></script>
+</html>

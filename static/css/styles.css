@@ -1,0 +1,359 @@
+
+/*  HELPER ELEMENTS*/
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+
+body{
+display: grid;
+font-family: sans-serif;
+margin:0;
+padding:0;
+}
+ul{
+list-style-type: none;
+}
+
+
+/*  menu-nav*/
+#loginsignup{
+    min-width: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+#loginsignup a{
+    font-weight: 800;
+    margin: 1px 5px;
+    background:  #222627;
+    padding: 5px 1em;
+    color: #fff;
+    border-radius: 10px;
+    opacity: 1.5;
+}
+
+nav{ 
+    width: 100%; 
+    font-family: century gothic;
+
+    box-shadow: 0 5px 50px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav >div{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav h3{
+    margin: 0.2em 1px;
+    font-size: 150%;
+}
+
+#navicon{
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+}
+
+a#caption{
+    padding: 1em;
+}
+
+nav >div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.8;
+}
+
+
+
+nav >div:nth-child(2) h3{
+    letter-spacing: 1.5px;
+    margin: unset;
+
+}
+
+
+
+#caption i{
+    display: flex;
+    align-items: center;
+    font-size: 150%;
+}
+
+#socialstop a{
+    width: 25px;
+    height: 25px;
+    margin: 4px 1em;
+    padding: 0.5em;
+    font-size: 100%;
+    border-radius: 50%;
+    color: #191c1d;
+    opacity: 0.8;
+    
+}
+
+#socialstop a :hover{
+    
+
+}
+
+/*  NON RESPONSIVE   */
+
+#navsections{
+    display: none;
+    justify-content: space-around;
+    min-width: 40%;
+    font-weight: 300;
+    font-size:
+     120%;
+}
+
+
+/*  footer*/
+
+footer{
+    font-family: century gothic;
+    align-self: flex-end;
+    width: 100%;
+    bottom: 0;
+    background: #191c1d;
+    color: #a6a6a6;
+    min-height: 200px;
+    height: auto;
+    padding-top: em;
+}
+
+.footerlist a,#about a{
+    display: block;
+    padding-bottom: 3%;
+    font-size: 90%;
+    color: #999999;
+}
+
+div#aboutus{
+    padding-right: 0.5em;
+}
+
+
+.footerlist a:hover,#about a:hover{
+    color: #fff;
+}
+
+footer h5{
+    color: #fff;
+    margin:unset;
+    margin-bottom: 5%;
+    font-size: 110%;
+    font-weight: 400;
+}
+
+
+
+footer> div:nth-child(1){
+    padding: 1em 1em;
+    padding-bottom: ;
+    display: grid;
+    height: 90%;
+}
+
+.footerel{
+    margin-left: unset !important;
+    margin-bottom: 8%;
+}
+
+#msgfield{
+    min-height: 100px;
+    border-radius: 5px
+}
+
+#sendmessage{
+    width:;
+    background:;
+}
+#sendmessage input,#sendmessage button{
+ width: 100%;
+ margin-bottom: 3%;
+ min-height: 30px;
+}
+
+#sendmsg input{
+color: #fff;
+border-radius: 4px;
+background: #2f89fc;
+border-color: #2f89fc;
+}
+
+
+
+#connect div{
+    display: flex;
+
+}
+
+#connect div a{
+    font-size: 120%;
+    margin-right: 10%;
+}
+
+#connect div a :hover{
+    color: #fff;
+}
+
+
+#copyright{
+    padding: 2px 1px;
+    background: #222627;
+    height: 10%;
+    text-align: center;
+    color:;
+}
+
+
+#mainbody{
+    display: grid;
+    padding: 1em 2em;
+    grid-template-columns: repeat(1,1fr);
+
+}
+
+
+@media  (max-width:400px){
+    #socialstop a{
+        margin: unset;
+
+}
+}
+
+@media  (min-width:650px){
+#sendmessage{
+    max-width: 70%;
+}
+
+}
+@media  (min-width:800px){
+    #articles{
+        margin: 20px;
+        margin-bottom: unset;
+    }
+    #mainbody{
+        display: grid;
+    }
+    
+    .footerlist a,#about a{
+        padding-bottom: 5%; 
+    }
+
+    #navsections{
+        margin-left: auto;
+        min-width:60%;
+        display: flex;
+        align-items: center;
+    }
+    #navsections >a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #navsections >a:hover{
+        border-bottom:3px solid #db4433;
+
+    }
+    
+    .aCtive{
+        border-bottom: 3px solid #db4433;
+    }
+
+    #navicon{
+        display: none;
+    }
+
+    nav >div:nth-child(2){
+        justify-content: unset;
+
+    }
+    
+    footer> div:nth-child(1){
+        grid-template-columns: 25% 15% 35% 25%;
+        height: 90%;
+    }
+    
+    footer >div:nth-child(1).yes{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #sendmessage{
+        max-width: unset;
+    }
+    #connect{
+        margin-left: 15%;
+    }
+    
+}
+
+#sidenav{
+    background-color: #191c1d;
+    position: fixed;
+    left: -2000px;
+    width: 100%;
+    z-index: 4;
+    height: 100%;
+    font-size:150%;
+    color: #fff;
+    font-weight: 700;
+    transition: 1.6s;
+}
+
+.slidebar{
+left: 0 !important;
+ 
+}
+
+
+#sidenav .icon{
+    color: #fff;
+}
+
+.icon{
+    font-size: 30px;
+}
+
+
+
+#sidenav div:nth-child(1){
+    padding: 10px 2em !important;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#sidenav div:nth-child(2){
+    padding-top: 10%;
+}
+
+#sidenav a{
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+#sidenav i{
+    font-size: 120%;
+}
+
+#sidenav span{
+    width: 50%;
+    margin: auto;
+    padding: 1em;
+    border-bottom: 2px solid #fff;
+    display: block;
+
+}
+
+
+
+#sidebar{
+    align-self: flex-start;
+
+}

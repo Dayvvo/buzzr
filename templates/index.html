@@ -1,0 +1,87 @@
+{% extends 'base_template.html' %}
+
+    {% block content  %}
+    <div id="articles">
+            <div id="articleset">   
+
+                 {% for article in articles %}
+                        <div id="articlewrap">
+                                <div class="singlearticle">
+                                    <a href="{% url 'detail' slug=article.slug %}">
+                                        <p id="genre"><i> {{article.genre}} </i></p>
+                                        <h3>{{ article.title }}</h3>
+                                        <div id="imgcontainer">
+                                            {% if article.images %}
+                                                <img src="{{article.images.url}}" alt=""/>                                        
+                                            {% else %}
+                                                <img src="/static/images/JF1.jpg" alt="">
+                                            {% endif %}
+                                        </div>
+                                        <div id="articlebod">
+                                            <div>
+                                                <p id="published"><span id="authname" style= "color: #393c3d;"> {{article.auth}} ({{article.date}}) <span> </p>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                    {{article.snippet}}
+                                                </span>
+                                            </div>
+                                         <a href="{% url 'detail' slug=article.slug %}"><button id="seemore">See more...</button> </a>
+                                          
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                        </div>
+
+                {% endfor %}
+            </div>
+            <div id="sidebar">           
+                <div class="ss">
+                    <div class="genheader">
+                            <div> <div></div> </div> 
+                            <h3>TRENDING</h3>
+                            <div> <div> </div> </div>
+                    </div>
+                    <div class="sidecontent">
+                        <div id="sideinner">
+                            <div class="inside-article">
+                                {% for i in trending  %}
+                                    <div class="color">
+                                        <a href=" {% url 'detail' slug=i.slug %} " class="article">  <div> {{i.title}} </div> </a>
+                                    </div>
+
+                                {% endfor %}
+                            </div>
+                            
+
+                        </div>
+                    </div>      
+                </div>
+            </div>
+    </div>
+    
+    <div class="paginate">
+        <ul class="{{index}}">
+            {% for i  in  article_query %}
+                {% if category  %}
+                        {% if i == 1 %}
+                                <a href=" {% url 'category' slug=index   %} " class="pag_link"> <li>{{i}}</li> </a>
+                        {% else %}
+                                <a href=" {% url 'category2'  slug=index  slug2=i %} " class="pag_link"> <li>{{i}}</li>  </a>
+                        {% endif %}
+                
+                {% else %}
+                        {% if i == 1 %}
+                                <a href=" {% url 'index'   %} " class="pag_link"> <li>{{i}}</li> </a>
+                        {% else %}
+                                <a href=" {% url 'index2'  slug=i %} " class="pag_link"> <li>{{i}}</li>  </a>
+                        {% endif %}
+                {% endif %}
+         {% endfor %}
+        </ul>
+    </div>
+    {% endblock  %}
+
+
+

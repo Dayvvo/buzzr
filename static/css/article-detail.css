@@ -1,0 +1,344 @@
+
+
+div.articledetail{
+    grid-template-columns: repeat(1,1fr) !important;
+}
+.mainarticle{
+    padding: unset;
+    margin: unset;
+}
+.mainarticle img{
+    max-width: 90%;
+}
+
+
+.mainarticle button{
+    user-select: none;
+    margin-top: 10px;
+    background:  #db443f;
+    padding: 5px 1em;
+    border-radius:5%;
+    border: 1px solid #db443f;
+    color: #fff;
+}
+
+
+#articledetail{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+    
+}
+
+p#genre{
+    display: flex;
+    font-size:90%;
+
+}
+
+
+p#genre i{
+    background: #db443f;
+    color: #fff;
+    padding: 0.5em 0.8em;
+    font-size: 150%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 2em;
+    font-weight: 800;
+}
+
+p#published{
+    font-weight: 800;
+    color: #393c3d
+}
+
+#authname{
+    font-weight: 800;
+    color: #393c3d;
+}
+
+
+#articleimg img{
+    width: 90%;
+    margin: auto;
+}
+
+.userforms{
+width: 100%;
+margin: auto;
+margin-top: 2em;
+margin-bottom: 5em;
+}
+
+.userforms p{
+    font-size: 120%;
+    text-align: center;
+}
+.userforms p span{
+color: #393c3d;
+font-weight: 900;
+}
+
+.userforms p span:hover{
+    color: #393c3d;
+    font-size: 120%;
+}
+
+.userforms input,#msgfield{
+width: 100%;
+border: 1px solid #393c3d;
+border-radius: 2px;
+margin-bottom:5% !important;
+min-height: 40px;
+}
+
+.userforms .usersubmit{
+background: #db443f;
+border: unset;
+color: #fff;
+}
+
+
+.userforms div.agreement{
+    display: flex;
+    grid-template-columns: 10% 80%;
+    margin-bottom: 5%;
+}
+
+.userforms div input{
+flex-basis: 10%;
+margin: unset;
+}
+
+.userforms div input{
+ width: 100%;
+ margin-bottom: 0.3em;
+ align-items: center;
+}
+
+
+
+#publishn{
+    border-radius: 5px;
+    padding: 0.8em 1.5em; 
+    background-color: #db443f;
+    border: 1px solid  #db443f;
+    color: #fff;
+}
+
+.genheader{
+ `   display: grid;
+    grid-template-columns: 25% 50% 25% ;
+    min-width: 150px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: unset;
+    justify-content: center;
+}
+
+
+.genheader div, .genheader h3{
+    flex: 1;
+}
+.genheader > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.genheader > div:nth-child(3){
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+.genheader h3{
+    font-weight: 900;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.genheader div div{
+    height: 4px;
+    width: 70%;
+    background-color: #db443f;
+
+}
+h4,h5{
+    margin-block-end: 0.3em;
+    margin-block-start: 0.3em;
+
+}
+
+#viewmore{
+    background: #db443f;
+    color: #fff;
+    padding: 0.8em 0.6em;
+    font-size: 100%;
+    width: max-content;
+    border-radius: 3px;
+}
+
+#viewmore:focus{
+    border: unset;
+}
+
+#commenth4{
+    margin-top: 3.6em;
+    margin-bottom: unset;
+}
+#commentbox{
+    margin-bottom: 2em;
+    margin-top:1em;
+}
+
+
+.comment_box{
+    margin: 1.2em 1px;
+    box-shadow:0 1px 6px 0 rgba(32, 33, 36, .28);
+    border-radius: 4px;
+    padding: 0.3em;
+    color: rgb(0, 0,0);
+}
+.comment_box >div{
+    padding: 0.4em;
+    padding-bottom: unset;
+    border-radius: 4px;
+    border: 1px solid rgba(32, 33, 36, .28) ;
+}
+
+
+
+.comment_name{
+    font-weight: bold;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.2em;
+    border-bottom: 3px solid #db443f;
+}
+
+.comment_time{
+    font-weight: bolder;
+    padding: 0.2em 1px;
+    
+}
+
+#addcomment{
+    display: grid;
+    grid-column-gap: 0.5em;
+
+}
+#addcomment >div{
+    box-sizing: border-box;
+
+}
+#addcomment  input,textarea{
+    width: 100%;
+    margin-bottom: 0.8em;
+    border: 1.1px solid #393c3d;
+    padding: 0.4em 1px;
+
+}
+#addcomment textarea{
+    max-height: 100%;
+}
+
+#addc{
+    color:#fff;
+    background: #393c3d;
+    display: flex;
+}
+#addc input{
+    width: 90%;
+    background: #393c3d;
+    color: #fff;
+    margin-bottom: unset;
+}
+
+
+#addc > span{
+    width: 5%;
+    height: 100%;
+    color: #393c3d;
+
+}
+span.spin{
+    padding: 0.2em;
+    display: flex;
+    align-items: center;
+}
+
+.spin span{
+    border: 1.8px dashed #fff;
+    animation-name: spinner;
+    animation-duration: 0.8s;
+    color: #393c3d;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+}
+#addc input:focus{
+    border: unset !important;
+    outline: unset !important;
+}
+
+@keyframes spinner{
+    from{
+        transform: rotateZ(0deg);
+    }    
+    to{
+        transform: rotateZ(360deg);
+    }
+
+}
+
+@media (max-width: 420px){
+    .genheader > div{
+        flex: 20%;
+        padding: unset;
+    }
+
+
+
+.genheader > h3{
+    flex: 60%;
+    text-align: center;
+}
+
+}
+
+@media(min-width: 600px){
+    #addcomment{
+        max-width: 90%;
+    }
+}
+
+
+
+@media(min-width: 900px){
+    #addcomment{
+        max-width: 80%;
+    }
+
+}
+
+@media(min-width: 1000px){
+
+    
+    .genheader{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+
+}  
+
+
+@media(min-width: 1000px){
+
+    #addcomment{
+        max-width: 68%;
+    }
+
+
+}

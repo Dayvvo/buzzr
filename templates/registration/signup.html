@@ -1,0 +1,41 @@
+{% extends 'base_template.html' %}
+   {% block content %}
+
+    <div class="mainbody">
+       <div class="form_header"> Create Account</div>
+            <form method="post" class="userforms">
+                {% csrf_token %}
+                <div>
+                {% for form_fields in form %}
+                    <div>        
+                        {{form_fields}}
+                        {% for error in form_fields.errors  %}
+                            <div>{{error}} </div>
+                        {% endfor %}
+                    </div>    
+                {% endfor %}
+                </div>
+                <div id="submitdiv">
+                    <input type="submit" class="usersubmit" value="SUBMIT">
+                </div>
+
+            </form>
+    </div>   
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'published' slug=user %}">
+            view articles
+        </a>
+    
+    {% endif %}
+    <div>
+    </div>
+
+{% endblock  %}
+
+
+
+
+
+
+

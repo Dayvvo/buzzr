@@ -1,0 +1,8 @@
+/*
+ Quantcast measurement tag
+ Copyright (c) 2008-2018, Quantcast Corp.
+*/
+(function(f,h,g){try{__qc("defaults",f,{labels:"_fp.event.Default"})}catch(q){}var k=function(a){return a.replace(/^[\s\ufeff\xA0]+|[\s\ufeff\xA0]+$/g,"")},l=function(a){return{}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()},n=function(a,b){if(!b)return b;var d,c;d=-1!==a.toLowerCase().indexOf("tag")||-1!==a.toLowerCase().indexOf("keyword")||0===a.toLowerCase().indexOf("qc:");c=-1===a.toLowerCase().indexOf("tag")&&-1===a.toLowerCase().indexOf("keyword")&&0===a.toLowerCase().indexOf("qc:")?
+!1:!0;c&&(b=b.replace(/\.+/g," "));if(d){c=b.split(",");for(d=0;d<c.length;d++)c[d]=k(c[d]);return c}return k(b.replace(/,+/g," "))},p=function(a,b,d){return a?"nc"===a?!b||!d||0>b.indexOf(d):"eq"===a?b===d:"sw"===a?0===b.indexOf(d):"ew"===a?(a=b.length-d.length,b=b.lastIndexOf(d,a),-1!==b&&b===a):"c"===a?0<=b.indexOf(d):!1:!1},e=function(a){return{labels:a}};__qc.apply(null,["rules",[f,null,[[function(a,b){var d=[],c;if("array"===l(b)){for(c=0;c<b.length;c++)d.push(a+"."+b[c]);return e(d.join(","))}return e(a+
+"."+b)},"_fp.event"]],[[function(a,b,d){b=document.getElementsByTagName("meta");for(var c,m,e=[],f=0;f<b.length;f++)c=b[f],m=c.getAttribute("name")||c.getAttribute("property"),m==d&&(e=e.concat(n(d,c.getAttribute("content"))));0<e.length?a(e):a(!1)},"exactmatch","og:title"]]],[f,null,[[function(a){return"array"===l(a)?e(a.join(",")):e(""+a)},"_fp.event.Homepage"]],[[function(a,b,d){var c;if(h.top===h.self)c=g.location.pathname;else{c=g.referrer;var e=g.createElement("a");e.href=c;c=e.pathname}p(b,
+c,d)?a(c):a(!1)},"eq","/"]]]])})("p-gapWjDVPppng3",window,document);

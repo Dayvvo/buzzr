@@ -1,0 +1,2 @@
+var last_event_capture_target;if(void 0===jq)var jq=jQuery;EventCapture=function(e){return{on:function(t,n,o,r){var v=this;jq(e).on(t,o,(function(e){v.fire_event("before_"+n,e),void 0!==r?(e.done_event="after_"+n,v.event(r,e)):v.fire_event("after_"+n,e)}))},event:function(e,t,n){e(t)},fire_event:function(e,t){"undefined"!=typeof debug_mode&&console.log("[Custom Event]",e),last_event_capture_target=void 0!==t?t.currentTarget:void 0;var n=new CustomEvent(e);document.dispatchEvent(n)}}};
+//# sourceMappingURL=maps/EventCapture.js.map

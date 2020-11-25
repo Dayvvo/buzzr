@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+    {% extends 'base_template.html' %}
+
+    {% block content  %}
+            <div id="mainbody">
+
+                    <div class="userforms">
+                        <h1 style="text-align: center;">SIGN UP</h1>
+                        <form method="POST" action="."  >
+                            {% csrf_token %}
+                             {{form}}          
+
+                             <input type="submit" id="usersubmit" value="SUBMIT" enctype="multipart/form-data">
+                             <p>Already have an account? <a href="{% url 'signin' %}"><span> SIGN IN </span></a> </p>                    
+
+                        </form>
+                        
+        
+                    </div>
+            </div>
+
+    {% endblock  %}
+
+
+
+    
+
+
+ <script src="/static/js/"></script>

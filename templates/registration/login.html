@@ -1,0 +1,20 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<div class="loginform">
+    <div class="form_header"> Login</div>
+    <form method="post" class=>
+        {% csrf_token %}
+            {{form.as_p}}
+            {{ form.non_field_errors }}
+        <div>
+            <input type="submit" value="SUBMIT">
+        </div>
+
+
+    </form>
+
+</div>
+{% endblock  %}
+
+

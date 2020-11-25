@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+    {% extends 'base_template.html' %}
+
+    {% block content  %}
+            <div id="mainbody">
+
+                    <div class="userforms">
+                        <h1 style="text-align: center;">SIGN IN</h1>
+                        <form action="POST" >
+                            <p>Dont have an account? <a href="{% url 'signin' %}"><span> SIGN UP </span></a> </p>                    
+                        </form>
+                    </div>
+            </div>
+
+    {% endblock  %}
+
+
+
+    
+
+
+ 

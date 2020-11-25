@@ -1,0 +1,12 @@
+(function () {
+    BizTrackingA.GoAccount({
+        webToLeadField: '',
+        chatEnabled: 'true' === 'true',
+        XUserId: 'f1ac5d8ba84e4d25f578a6314858b5dd',
+        formProviderEnabled: 'true' === 'true',
+        attach_secure_forms: 'true' === 'true',
+        viewThroughEnabled: 'false' === 'true',
+        interceptAjax: 'true' === 'true'
+    });
+})();
+;

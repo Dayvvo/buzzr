@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 220" enable-background="new 0 0 320 220" xml:space="preserve">
+<g>
+	<rect y="0.333" fill="#ED2939" width="320" height="220"/>
+	<rect y="0.333" fill="#FFFFFF" width="213.333" height="220"/>
+	<rect y="0.333" fill="#002395" width="106.667" height="220"/>
+</g>
+<path opacity="0.4" d="M312,8v204H8V8H312 M320,0H0v220h320V0L320,0z"/>
+</svg>

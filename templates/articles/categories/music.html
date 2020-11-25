@@ -1,0 +1,66 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    <div id="articles">
+            <div id="articleset">   
+                 {% for music_article in music_articles %}
+                        <div id="articlewrap">
+                                <div class="singlearticle">
+                                    <a href="{% url 'detail' slug=music_article.slug %}">
+                                        <h3>{{ music_article.title }}</h3>
+                                        <div id="imgcontainer">
+                                            <img src="/static/images/JF1.jpg" alt="">
+                                        </div>
+                                        
+                                        <div id="articlebod">
+                                            <div>
+                                                <span>
+                                                    {{music_article.snippet}}
+                                                </span>
+                                            </div>
+                                            <button id="seemore">See more...</button>
+                                        
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                        </div>
+
+                {% endfor %}
+            </div>
+            <div id="sidebar">           
+                <div class="ss">
+                    <div class="genheader">
+                        <div> <div></div> </div> 
+                        <h3>LATEST</h3>
+                        <div> <div> </div> </div>
+                    </div>
+                    <div class="sidecontent">
+                        <div id="sideinner">
+                            <div class="inside-article">
+                                <div class="article">
+                                    <span>BELLANAIJA BLOG GOES OFFLINE FOR 24 HOURS</span>
+                                </div>
+                                <div class="article">
+                                    <span>BELLANAIJA BLOG GOES OFFLINE FOR 24 HOURS</span>
+                                </div>
+                                <div class="article">
+                                    <span>BELLANAIJA BLOG GOES OFFLINE FOR 24 HOURS</span>
+                                </div>
+                                <div class="article">
+                                    <span>BELLANAIJA BLOG GOES OFFLINE FOR 24 HOURS</span>
+                                </div>
+                                <div class="article">
+                                    <span>BELLANAIJA BLOG GOES OFFLINE FOR 24 HOURS</span>
+                                </div>                        
+                            </div>
+                            
+
+                        </div>
+                    </div>      
+                </div>
+            </div>
+    </div>
+
+{% endblock %}

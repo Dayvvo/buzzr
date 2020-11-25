@@ -1,0 +1,30 @@
+{% extends 'base_template.html' %}
+
+
+
+{% block content %}
+
+    <div>
+        {% if len(published) >1 %}
+            {% for article in published %}
+                <p>
+                    {{article}}
+                </p>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>
+                {{published}}
+            </p>
+
+        {% endif %}
+        
+        
+    
+    
+    </div>
+
+
+{% endblock  %}

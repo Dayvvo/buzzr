@@ -1,0 +1,32 @@
+{% extends 'base_template.html' %}
+
+{% block content  %}
+            <div class="userforms">
+                
+                <h1 style="text-align: center;">SIGN UP</h1>
+                  
+                 <form action="POST">
+                    <input type="text" name="" placeholder="Full Name">
+                    <input type="email" name=""placeholder="Email">
+                    <input type="password" name="" placeholder="Password">
+                    <input type="password" name="" placeholder="Confirm Password">
+                    <div class="agreement"><input type="checkbox" name="terms&conditions" id="terms" required> <div>I agee to all terms and conditions</div>  </div>
+                    <input type="submit" value="SUBMIT" id="usersubmit">
+                    <p>Already have an account? <a href="{% url 'signin' %}"><span> SIGN IN </span></a> </p>                    
+                    
+                </form>
+
+            </div>
+    </div>
+
+
+    
+
+
+                </div>
+            </div>
+    </div>
+
+{% endblock %}
+
+

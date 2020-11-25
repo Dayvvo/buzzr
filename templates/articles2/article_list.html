@@ -1,0 +1,17 @@
+{% extends 'base_templates.html' %}
+
+{% block Wrapper %}
+
+    <div class="articles">
+        {% for article in articles %}
+            <div class="article">
+                   <h2> <a href="{% url 'detail' slug=article.slug %}"> {{article.title}} </a> </h2>
+                   <p>  {{article.body}}  </p>
+                   <p>  {{article.date}} </p>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
